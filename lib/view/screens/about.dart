@@ -78,7 +78,7 @@ class _MyAppState extends State<AboutPage> {
                       onPressed: () {},
                       child: Text('Hire Me'),
                       style: TextButton.styleFrom(
-                        primary: Colors.black,
+                        foregroundColor: Colors.black,
                         backgroundColor: Colors.white, // Background Color
                       ),
                     ),
@@ -128,65 +128,6 @@ class _MyAppState extends State<AboutPage> {
           ],
         ),
       ),
-      // body: Container(
-      //   alignment: Alignment.center,
-      //   child: Column(
-      //     crossAxisAlignment: CrossAxisAlignment.center,
-      //     children: [
-      //       SizedBox(
-      //         height: 40,
-      //       ),
-      //       ShaderMask(
-      //         shaderCallback: (rect) {
-      //           return LinearGradient(
-      //             begin: Alignment.center,
-      //             end: Alignment.bottomCenter,
-      //             colors: [Colors.black, Colors.transparent],
-      //           ).createShader(Rect.fromLTRB(0, 0, rect.width, rect.height));
-      //         },
-      //         blendMode: BlendMode.dstIn,
-      //         child: Image.asset(
-      //           'assests/bnw.png',
-      //           height: 400,
-      //           fit: BoxFit.contain,
-      //         ),
-      //       ),
-      //       SizedBox(
-      //         height: 20,
-      //       ),
-      //       Text(
-      //         'Hello I am',
-      //         style: TextStyle(color: Colors.white, fontSize: 30),
-      //       ),
-      //       SizedBox(
-      //         height: 10,
-      //       ),
-      //       Text('Siddharth Chopra',
-      //           style: TextStyle(color: Colors.white, fontSize: 40)),
-      //       SizedBox(
-      //         height: 10,
-      //       ),
-      //       Text(
-      //         'Software Developer',
-      //         style: TextStyle(color: Colors.white, fontSize: 20),
-      //       ),
-      //       SizedBox(
-      //         height: 10,
-      //       ),
-      //       SizedBox(
-      //         child: TextButton(
-      //           onPressed: () {},
-      //           child: Text('Hire Me'),
-      //           style: TextButton.styleFrom(
-      //             primary: Colors.black,
-      //             backgroundColor: Colors.white, // Background Color
-      //           ),
-      //         ),
-      //         width: 120,
-      //       ),
-      //     ],
-      //   ),
-      // ),
     );
   }
 }

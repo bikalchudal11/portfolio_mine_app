@@ -33,7 +33,7 @@ class _MyHomeState extends State<HomePage> {
     );
   }
 
-  mySpec(IconData icon, text) {
+  mySpec(IconData icon, text, Color color) {
     return Container(
       child: Card(
         margin: EdgeInsets.all(0),
@@ -47,7 +47,7 @@ class _MyHomeState extends State<HomePage> {
             children: [
               FaIcon(
                 icon,
-                color: Colors.white,
+                color: color,
               ),
               SizedBox(
                 height: 10,
@@ -253,9 +253,72 @@ class _MyHomeState extends State<HomePage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          mySpec(FontAwesomeIcons.android, 'Dart'),
-                          mySpec(FontAwesomeIcons.aws, 'Flutter'),
-                          mySpec(FontAwesomeIcons.html5, 'HTML'),
+                          Row(
+                            children: [
+                              Container(
+                                height: 115,
+                                width: 105,
+                                decoration: BoxDecoration(
+                                  color: Colors.black,
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      height: 30,
+                                      child: Image(
+                                          fit: BoxFit.cover,
+                                          image: AssetImage(
+                                              'lib/assets/images/dart_logo.png')),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      "Dart",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 16),
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                height: 115,
+                                width: 105,
+                                decoration: BoxDecoration(
+                                  color: Colors.black,
+                                  borderRadius: BorderRadius.circular(15),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      height: 30,
+                                      child: Image(
+                                          fit: BoxFit.cover,
+                                          image: AssetImage(
+                                              'lib/assets/images/flutter_logo.png')),
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      "Flutter",
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 16),
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                          mySpec(FontAwesomeIcons.html5, 'HTML',
+                              Color.fromARGB(255, 246, 71, 59)),
                         ],
                       ),
                       SizedBox(
@@ -264,9 +327,11 @@ class _MyHomeState extends State<HomePage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          mySpec(FontAwesomeIcons.css3Alt, 'CSS'),
-                          mySpec(FontAwesomeIcons.js, 'JavaScript'),
-                          mySpec(FontAwesomeIcons.github, 'Github'),
+                          mySpec(FontAwesomeIcons.css3Alt, 'CSS', Colors.blue),
+                          mySpec(
+                              FontAwesomeIcons.js, 'JavaScript', Colors.yellow),
+                          mySpec(
+                              FontAwesomeIcons.github, 'Github', Colors.white),
                         ],
                       ),
                       SizedBox(
